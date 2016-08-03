@@ -33,7 +33,7 @@ angularStrutsApp.factory('DataService', ['$http', '$q', function($http, $q) {
         var def = $q.defer();
         if(method === 'GET') {
             return $http.get(url).success(function(data) {
-                DataService.data = data;
+
                 def.resolve(data);
             }).error(function() {
                 def.reject("Failed to get data");

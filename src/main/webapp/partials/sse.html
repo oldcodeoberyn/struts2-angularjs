@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>EventSource demo</title>
+<h1>new EventSource() for S2</h1>
+<p><output id="result">OUTPUT VALUE</output></p>
+<script>
+(function(global, window, document) {
+  'use strict';
+
+  function main() {
+    window.addEventListener('DOMContentLoaded', contentLoaded);
+  }
+
+  function contentLoaded() {
+    var result = document.getElementById('result');
+    var stream = new EventSource('suscribe.action');
+    stream.addEventListener('message', function(event) {
+      var data = event.data;
+      result.value = data;
+    });
+  }
+
+  main();
+})(this, window, window.document);
+</script>
+<!--
+Also See :
+http://server-sent-events-demo.herokuapp.com/
+ -->

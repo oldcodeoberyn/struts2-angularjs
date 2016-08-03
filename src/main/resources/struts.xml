@@ -8,7 +8,12 @@
   <constant name="struts.devMode" value="true"/>
 
   <constant name="struts.convention.default.parent.package" value="angularstruts"/>
-  <package name="angularstruts" extends="json-default"></package>
+  <package name="angularstruts" extends="json-default">
+      <action name="suscribe" class="com.jgeppert.samples.actions.SseAction" method="handleSSE">
+          <result name="success">/view/empty.txt</result>
+          <!-- we don't need the full stack here -->
+      </action>
+  </package>
   <package name="data" extends="angularstruts" namespace="/data"></package>
 
 </struts>

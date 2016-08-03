@@ -14,7 +14,7 @@
 <h2><s:property value="message"/></h2>
 
 <div>
-    <a href="/home">Home</a> - <a href="/projects">Projects</a>
+    <a href="/home">Home</a> - <a href="/projects">Projects</a> - <a href="/sse">SSE</a>
 </div>
 
 <div ng-controller="AppController">

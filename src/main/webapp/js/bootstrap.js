@@ -32,6 +32,9 @@ angularStrutsApp.config(['$routeProvider', '$locationProvider',
         }).when('/home', {
             templateUrl: 'partials/home.html',
             controller: 'HomeController'
+        }).when('/sse', {
+            templateUrl: 'partials/sse.html',
+            controller: 'SseController'
         }).otherwise({ redirectTo: '/home' });
     }
 ]);

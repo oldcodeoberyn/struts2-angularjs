@@ -40,6 +40,13 @@ public class ProjectsAction extends ActionSupport {
 
     private List<String> projectNames;
 
+    public String getHaha()
+    {
+        return haha;
+    }
+
+    private String haha = "Fuck";
+
     public String execute() throws Exception {
 
         projectNames = new ArrayList<String>();
